@@ -1,9 +1,15 @@
 :host {
-  background: darken(#f5f5f5, 10%);
+  background: #f5f5f5;
   width: 64px;
   height: 100%;
 }
 
 app-icon {
   font-size: 1.4rem;
+}
+
+button {
+  min-width: auto;
+  width: 100%;
+  padding: 4px 0;
 }
