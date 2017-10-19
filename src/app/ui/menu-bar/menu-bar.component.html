@@ -1,0 +1,40 @@
+<button mat-raised-button [matMenuTriggerFor]="fileMenu" color="primary" class="flat">File</button>
+<mat-menu #fileMenu="matMenu">
+  <button mat-menu-item>
+    <app-icon>file</app-icon>
+    <span>New</span>
+  </button>
+  <button mat-menu-item>
+    <app-icon>folder-open</app-icon>
+    <span>Open</span>
+  </button>
+  <button mat-menu-item>
+    <app-icon>content-save</app-icon>
+    <span>Save</span>
+  </button>
+  <button mat-menu-item>
+    <app-icon>content-save-settings</app-icon>
+    <span>Save as...</span>
+  </button>
+  <button mat-menu-item>
+    <app-icon>file-export</app-icon>
+    <span>Export</span>
+  </button>
+</mat-menu>
+
+<button mat-raised-button [matMenuTriggerFor]="editMenu" class="flat">Edit</button>
+<mat-menu #editMenu="matMenu">
+  <button mat-menu-item>
+    <app-icon>undo</app-icon>
+    <span>Undo</span>
+  </button>
+  <button mat-menu-item>
+    <app-icon>redo</app-icon>
+    <span>Redo</span>
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>
+    <app-icon>settings</app-icon>
+    <span>Settings</span>
+  </button>
+</mat-menu>

@@ -1,0 +1,15 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./style/layout.scss";
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border-radius: 0 !important;
+
+  &.flat {
+    box-shadow: none !important;
+  }
+}
