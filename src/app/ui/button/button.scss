@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+@mixin button-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  [appButton] {
+    background: none;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+@import "../../../style/theme";
+@include button-theme($app-theme)
+
+[appButton] {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background $animation-length ease;
+}

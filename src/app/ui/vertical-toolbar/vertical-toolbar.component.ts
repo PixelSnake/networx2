@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Buttons} from "./buttons";
 
 @Component({
   selector: 'app-vertical-toolbar',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerticalToolbarComponent implements OnInit {
 
+  buttons = Buttons
+  mode: string
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getClass(mode: string) {
+    return `${this.mode === mode ? 'selected' : ''}`
+  }
+
+  selectMode(mode: string) {
+    this.mode = mode
   }
 
 }

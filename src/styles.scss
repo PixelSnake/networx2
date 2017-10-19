@@ -1,5 +1,8 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import "./style/layout.scss";
+@import "./style/theme";
+@import "./style/layout";
+@import "./style/animations";
+
+@import "app/ui/button/button";
 
 html, body {
   padding: 0;

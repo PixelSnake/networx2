@@ -5,6 +5,7 @@ import {MaterialModule} from "../material/material.module";
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import {IconComponent} from "./icon/icon.component";
 import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.component';
+import { ButtonDirective } from './button/button.directive';
 
 @NgModule({
   imports: [
@@ -16,12 +17,14 @@ import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.co
     ToolBarComponent,
     IconComponent,
     VerticalToolbarComponent,
+    ButtonDirective,
   ],
   exports: [
     MenuBarComponent,
     ToolBarComponent,
     IconComponent,
-    VerticalToolbarComponent
+    VerticalToolbarComponent,
+    ButtonDirective,
   ],
   providers: [
   ]
