@@ -11,7 +11,6 @@ import {Position} from "../models/position.interface";
 export class StationLabelComponent implements OnInit, Selectable {
 
   selected: boolean = false
-  editing: boolean = false
 
   @Input()
   label: StationLabel
@@ -27,12 +26,6 @@ export class StationLabelComponent implements OnInit, Selectable {
 
   onDeselected(): void {
     this.selected = false
-    this.editing = false
-  }
-
-  onDblClick() {
-    if (!this.selected) return
-    this.editing = true
   }
 
   mouseMoved(p: Position) {
