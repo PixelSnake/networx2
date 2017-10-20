@@ -1,6 +1,6 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-import {Station} from "../models/station.interface";
-import {SelectionService} from "../services/selection/selection.service";
+import {Component, HostListener, OnInit} from '@angular/core'
+import {Station} from '../models/station.interface'
+import {SelectionService} from '../services/selection/selection.service'
 
 @Component({
   selector: 'app-map',

@@ -1,7 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {StationLabel} from "../models/station-label.interface";
-import {Selectable} from "../models/selectable.interface";
-import {Position} from "../models/position.interface";
+import {Component, Input, OnInit} from '@angular/core'
+import {StationLabel} from '../models/station-label.interface'
+import {Selectable} from '../models/selectable.interface'
+import {Position} from '../models/position.interface'
 
 @Component({
   selector: 'app-station-label',
@@ -10,7 +10,7 @@ import {Position} from "../models/position.interface";
 })
 export class StationLabelComponent implements OnInit, Selectable {
 
-  selected: boolean = false
+  selected = false
 
   @Input()
   label: StationLabel

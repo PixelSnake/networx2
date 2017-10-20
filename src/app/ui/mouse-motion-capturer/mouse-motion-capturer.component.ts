@@ -1,5 +1,5 @@
-import {Component, EventEmitter, HostListener, Input, OnInit, Output} from '@angular/core';
-import {Position} from "../../map/models/position.interface";
+import {Component, EventEmitter, HostListener, Input, OnInit, Output} from '@angular/core'
+import {Position} from '../../map/models/position.interface'
 
 @Component({
   selector: 'app-mouse-motion-capturer',
@@ -9,7 +9,7 @@ import {Position} from "../../map/models/position.interface";
 export class MouseMotionCapturerComponent implements OnInit {
 
   @Input()
-  stopPropagation: boolean = false
+  stopPropagation = false
 
   @Output()
   mouseMoved: EventEmitter<Position> = new EventEmitter<Position>()

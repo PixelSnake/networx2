@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import {Selectable} from "../../models/selectable.interface";
+import { Injectable } from '@angular/core'
+import {Selectable} from '../../models/selectable.interface'
 
 @Injectable()
 export class SelectionService {

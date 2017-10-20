@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Buttons} from "./buttons";
+import { Component, OnInit } from '@angular/core'
+import {Buttons} from './buttons'
 
 @Component({
   selector: 'app-vertical-toolbar',

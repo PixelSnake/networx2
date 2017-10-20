@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core'
+import { CommonModule } from '@angular/common'
 import {
   MatButtonModule, MatToolbarModule, MatMenuModule, MatListModule,
   MatButtonToggleModule, MatSelectModule, MatRippleModule
-} from "@angular/material";
+} from '@angular/material'
 
 @NgModule({
   imports: [

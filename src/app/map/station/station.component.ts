@@ -1,9 +1,9 @@
-import {Component, HostBinding, HostListener, Input, OnInit, ViewChild} from '@angular/core';
-import {Station} from "../models/station.interface";
-import {Position} from "../models/position.interface";
-import {SelectionService} from "../services/selection/selection.service";
-import {Selectable} from "../models/selectable.interface";
-import {StationLabelComponent} from "../station-label/station-label.component";
+import {Component, HostBinding, HostListener, Input, OnInit, ViewChild} from '@angular/core'
+import {Station} from '../models/station.interface'
+import {Position} from '../models/position.interface'
+import {SelectionService} from '../services/selection/selection.service'
+import {Selectable} from '../models/selectable.interface'
+import {StationLabelComponent} from '../station-label/station-label.component'
 
 @Component({
   selector: 'app-station',
