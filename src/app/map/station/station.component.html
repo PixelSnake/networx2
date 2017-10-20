@@ -1,5 +1,13 @@
-<div class="dot"
+<div class="container"
      [style.left]="station.position.x + 'px'"
      [style.top]="station.position.y + 'px'">
-  <app-mouse-motion-capturer (mouseMoved)="mouseMoved($event)"></app-mouse-motion-capturer>
+  <div class="dot"
+       [class.selected]="selected">
+    <app-mouse-motion-capturer
+      (mouseMoved)="mouseMoved($event)"
+      (mouseDown)="mouseDown()"></app-mouse-motion-capturer>
+  </div>
+  <app-station-label #label
+    class="label"
+    [label]="station.label"></app-station-label>
 </div>

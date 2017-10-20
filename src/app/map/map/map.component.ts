@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Station} from "../models/station.interface";
+import {SelectionService} from "../services/selection/selection.service";
 
 @Component({
   selector: 'app-map',
@@ -10,13 +11,21 @@ export class MapComponent implements OnInit {
 
   stations: Station[] = [
     {
-      position: { x: 100, y: 100 }
+      position: { x: 100, y: 100 },
+      label: {
+        title: 'Station 1',
+        position: { x: 0, y: 0 }
+      }
     }
   ]
 
-  constructor() { }
+  constructor(private selection: SelectionService) { }
 
   ngOnInit() {
+  }
+
+  onClick() {
+    this.selection.clear()
   }
 
 }

@@ -1,0 +1,14 @@
+<div class="container"
+     [style.left]="label.position.x + 'px'"
+     [style.top]="label.position.y + 'px'"
+     [class.selected]="selected"
+
+     (dblclick)="onDblClick()">
+  <app-mouse-motion-capturer
+    *ngIf="selected && !editing"
+    (mouseMoved)="mouseMoved($event)">
+  </app-mouse-motion-capturer>
+
+  <input *ngIf="editing" type="text" />
+  <span>{{ label.title }}</span>
+</div>

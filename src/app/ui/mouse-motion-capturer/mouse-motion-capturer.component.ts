@@ -1,4 +1,4 @@
-import {Component, EventEmitter, HostListener, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, HostListener, Input, OnInit, Output} from '@angular/core';
 import {Position} from "../../map/models/position.interface";
 
 @Component({
@@ -7,6 +7,9 @@ import {Position} from "../../map/models/position.interface";
   styleUrls: ['./mouse-motion-capturer.component.scss']
 })
 export class MouseMotionCapturerComponent implements OnInit {
+
+  @Input()
+  stopPropagation: boolean = false
 
   @Output()
   mouseMoved: EventEmitter<Position> = new EventEmitter<Position>()
@@ -34,8 +37,8 @@ export class MouseMotionCapturerComponent implements OnInit {
     }
   }
 
-  @HostListener('mouseup')
-  onMouseup() {
+  @HostListener('mouseup', ['$event'])
+  onMouseup(event: MouseEvent) {
     this.isMouseDown = false
     this.mouseUp.emit(this.positionFromEvent(event))
   }
@@ -48,7 +51,7 @@ export class MouseMotionCapturerComponent implements OnInit {
   }
 
   @HostListener('mousedown', ['$event'])
-  onMousedown(event) {
+  onMousedown(event: MouseEvent) {
     this.isMouseDown = true
     this.mouseDown.emit(this.positionFromEvent(event))
   }
