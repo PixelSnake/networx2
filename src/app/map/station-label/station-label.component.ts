@@ -31,6 +31,7 @@ export class StationLabelComponent implements OnInit, Selectable {
   }
 
   onDblClick() {
+    if (!this.selected) return
     this.editing = true
   }
 

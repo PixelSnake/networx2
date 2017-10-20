@@ -9,6 +9,6 @@
     (mouseMoved)="mouseMoved($event)">
   </app-mouse-motion-capturer>
 
-  <input *ngIf="editing" type="text" />
-  <span>{{ label.title }}</span>
+  <sm-input [hidden]="!editing" [(model)]="label.title"></sm-input>
+  <span *ngIf="!editing">{{ label.title }}</span>
 </div>
