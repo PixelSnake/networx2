@@ -7,6 +7,7 @@ import { IconComponent } from "./icon/icon.component";
 import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.component';
 import { ButtonDirective } from './button/button.directive';
 import { DropdownComponent } from "./dropdown/dropdown.component";
+import {MouseMotionCapturerComponent} from "./mouse-motion-capturer/mouse-motion-capturer.component";
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { DropdownComponent } from "./dropdown/dropdown.component";
     IconComponent,
     VerticalToolbarComponent,
     ButtonDirective,
-    DropdownComponent
+    DropdownComponent,
+    MouseMotionCapturerComponent
   ],
   exports: [
     MenuBarComponent,
@@ -27,7 +29,8 @@ import { DropdownComponent } from "./dropdown/dropdown.component";
     IconComponent,
     VerticalToolbarComponent,
     ButtonDirective,
-    DropdownComponent
+    DropdownComponent,
+    MouseMotionCapturerComponent
   ],
   providers: [
   ]

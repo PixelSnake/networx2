@@ -1,0 +1,21 @@
+:host {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+}
+
+.mouseMotionCapturer {
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  //background: rgba(255, 0, 0, 0.5);
+
+  &.fullSize {
+    z-index: 100000;
+    position: fixed;
+  }
+}

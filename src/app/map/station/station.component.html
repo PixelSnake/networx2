@@ -1,0 +1,5 @@
+<div class="dot"
+     [style.left]="station.position.x + 'px'"
+     [style.top]="station.position.y + 'px'">
+  <app-mouse-motion-capturer (mouseMoved)="mouseMoved($event)"></app-mouse-motion-capturer>
+</div>
