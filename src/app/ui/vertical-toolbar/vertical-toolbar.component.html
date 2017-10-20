@@ -1,11 +1,8 @@
 <div style="text-align: center; padding-top: 12px;">
-  <button mat-icon-button>
-    <app-icon>cursor-default-outline</app-icon>
-  </button>
-  <button mat-icon-button>
-    <app-icon>checkbox-blank-circle-outline</app-icon>
-  </button>
-  <button mat-icon-button>
-    <app-icon>vector-line</app-icon>
+  <button appButton
+          *ngFor="let button of buttons"
+          [class]="getClass(button.mode)"
+          (click)="selectMode(button.mode)">
+    <app-icon>{{ button.icon }}</app-icon>
   </button>
 </div>

@@ -1,5 +1,12 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import "./style/layout.scss";
+@import "./style/theme";
+@import "./style/layout";
+@import "./style/animations";
+
+@import "app/ui/button/button";
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
 
 html, body {
   padding: 0;
