@@ -1,3 +1,7 @@
-<app-dropdown>
+<sui-select class="selection">
+  <sui-select-option *ngFor="let line of mockLines" [value]="line.name"></sui-select-option>
+</sui-select>
 
-</app-dropdown>
+<pre>
+  {{ mockLines | json }}
+</pre>

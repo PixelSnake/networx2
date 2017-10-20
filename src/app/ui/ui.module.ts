@@ -7,11 +7,13 @@ import { IconComponent } from "./icon/icon.component";
 import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.component';
 import { ButtonDirective } from './button/button.directive';
 import { DropdownComponent } from "./dropdown/dropdown.component";
+import {SuiModule} from "ng2-semantic-ui";
 
 @NgModule({
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    SuiModule
   ],
   declarations: [
     MenuBarComponent,
