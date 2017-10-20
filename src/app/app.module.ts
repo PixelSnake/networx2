@@ -6,7 +6,6 @@ import { MaterialModule } from './material/material.module'
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {UiModule} from "./ui/ui.module";
 import {MapModule} from "./map/map.module";
-import {SuiModule} from "ng2-semantic-ui";
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import {SuiModule} from "ng2-semantic-ui";
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    SuiModule,
     UiModule,
     MapModule
   ],

@@ -14,7 +14,8 @@ export class MapComponent implements OnInit {
       position: { x: 100, y: 100 },
       label: {
         title: 'Station 1',
-        position: { x: 0, y: 0 }
+        position: { x: 0, y: 0 },
+        icons: []
       }
     }
   ]

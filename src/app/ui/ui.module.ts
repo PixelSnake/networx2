@@ -8,13 +8,11 @@ import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.co
 import { ButtonDirective } from './button/button.directive';
 import { DropdownComponent } from "./dropdown/dropdown.component";
 import {MouseMotionCapturerComponent} from "./mouse-motion-capturer/mouse-motion-capturer.component";
-import {SuiModule} from "ng2-semantic-ui";
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
-    SuiModule
   ],
   declarations: [
     MenuBarComponent,
