@@ -7,6 +7,7 @@ import { IconComponent } from "./icon/icon.component";
 import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.component';
 import { ButtonDirective } from './button/button.directive';
 import { DropdownComponent } from "./dropdown/dropdown.component";
+import {MouseMotionCapturerComponent} from "./mouse-motion-capturer/mouse-motion-capturer.component";
 import {SuiModule} from "ng2-semantic-ui";
 
 @NgModule({
@@ -21,7 +22,8 @@ import {SuiModule} from "ng2-semantic-ui";
     IconComponent,
     VerticalToolbarComponent,
     ButtonDirective,
-    DropdownComponent
+    DropdownComponent,
+    MouseMotionCapturerComponent
   ],
   exports: [
     MenuBarComponent,
@@ -29,7 +31,8 @@ import {SuiModule} from "ng2-semantic-ui";
     IconComponent,
     VerticalToolbarComponent,
     ButtonDirective,
-    DropdownComponent
+    DropdownComponent,
+    MouseMotionCapturerComponent
   ],
   providers: [
   ]

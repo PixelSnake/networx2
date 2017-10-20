@@ -1,0 +1,12 @@
+<div class="container flex flex-row"
+     [style.left]="label.position.x + 'px'"
+     [style.top]="label.position.y + 'px'"
+     [class.selected]="selected">
+  <app-mouse-motion-capturer
+    (mouseMoved)="mouseMoved($event)">
+  </app-mouse-motion-capturer>
+
+  <span>
+    {{ label.title }}
+  </span>
+</div>
