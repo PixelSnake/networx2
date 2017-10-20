@@ -7,6 +7,11 @@
     background: transparentize(mat-color($primary), 0.9);
     border-color: mat-color($primary);
   }
+
+  .moveHandle {
+    background: transparentize(mat-color($primary), 0.2);
+    border-color: mat-color($primary);
+  }
 }
 
 @import "../../../style/theme";
@@ -14,10 +19,26 @@
 
 .container {
   position: absolute;
-  z-index: 100;
+  z-index: 1100;
 
   border: 2px solid transparent;
-  padding: 4px;
-
   white-space: nowrap;
+}
+
+.innerContent {
+  padding: 4px;
+}
+
+.moveHandle {
+  position: absolute;
+  left: -36px;
+  top: -2px;
+  box-sizing: content-box;
+  height: 100%;
+  color: #fff;
+  width: 32px;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 1.6rem;
+  text-align: center;
 }
