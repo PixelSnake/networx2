@@ -7,11 +7,13 @@ import { IconComponent } from './icon/icon.component'
 import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.component'
 import { ButtonDirective } from './button/button.directive'
 import {MouseMotionCapturerComponent} from './mouse-motion-capturer/mouse-motion-capturer.component'
+import {NgSemanticModule} from "ng-semantic";
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
+    NgSemanticModule
   ],
   declarations: [
     MenuBarComponent,

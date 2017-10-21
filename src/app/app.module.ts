@@ -6,6 +6,7 @@ import { MaterialModule } from './material/material.module'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import {UiModule} from './ui/ui.module'
 import {MapModule} from './map/map.module'
+import {AttributeEditorModule} from "./attribute-editor/attribute-editor.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {MapModule} from './map/map.module'
     BrowserAnimationsModule,
     MaterialModule,
     UiModule,
-    MapModule
+    MapModule,
+    AttributeEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

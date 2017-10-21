@@ -28,7 +28,9 @@ export class StationComponent implements OnInit, Selectable {
   }
 
   mouseDown() {
-    this.selection.setSelected(this)
+    if (!this.selected) {
+      this.selection.setSelected(this)
+    }
   }
 
   mouseMoved(p: Position) {
