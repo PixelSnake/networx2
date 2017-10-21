@@ -3,15 +3,16 @@ import { CommonModule } from '@angular/common'
 import { StationComponent } from './station/station.component'
 import { MapComponent } from './map/map.component'
 import {UiModule} from '../ui/ui.module'
-import {SelectionService} from './services/selection/selection.service'
 import { StationLabelComponent } from './station-label/station-label.component'
 import {NgSemanticModule} from 'ng-semantic/ng-semantic'
+import {MapServicesModule} from "./services/map-services.module";
 
 @NgModule({
   imports: [
     CommonModule,
     UiModule,
-    NgSemanticModule
+    NgSemanticModule,
+    MapServicesModule
   ],
   declarations: [
     StationComponent,
@@ -21,9 +22,6 @@ import {NgSemanticModule} from 'ng-semantic/ng-semantic'
   exports: [
     StationComponent,
     MapComponent
-  ],
-  providers: [
-    SelectionService
   ]
 })
 export class MapModule { }

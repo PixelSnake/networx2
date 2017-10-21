@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import {Buttons} from './buttons'
+import {ToolService} from "../../map/services/tool/tool.service";
 
 @Component({
   selector: 'app-vertical-toolbar',
@@ -11,17 +12,16 @@ export class VerticalToolbarComponent implements OnInit {
   buttons = Buttons
   mode: string
 
-  constructor() { }
+  constructor(private tool: ToolService) {
+    tool.selectedTool$.subscribe(t => this.mode = t)
+    tool.selectTool('select')
+  }
 
   ngOnInit() {
   }
 
-  getClass(mode: string) {
-    return `${this.mode === mode ? 'selected' : ''}`
-  }
-
   selectMode(mode: string) {
-    this.mode = mode
+    this.tool.selectTool(mode)
   }
 
 }

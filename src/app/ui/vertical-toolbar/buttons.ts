@@ -5,10 +5,10 @@ export const Buttons = [
   },
   {
     icon: 'checkbox-blank-circle-outline',
-    mode: 'node'
+    mode: 'station_create'
   },
   {
     icon: 'vector-line',
-    mode: 'connect'
+    mode: 'connection_create'
   }
 ]

@@ -7,11 +7,13 @@ import { IconComponent } from './icon/icon.component'
 import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.component'
 import { ButtonDirective } from './button/button.directive'
 import {MouseMotionCapturerComponent} from './mouse-motion-capturer/mouse-motion-capturer.component'
+import {MapServicesModule} from "../map/services/map-services.module";
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
+    MapServicesModule
   ],
   declarations: [
     MenuBarComponent,
