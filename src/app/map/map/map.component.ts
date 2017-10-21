@@ -1,6 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core'
 import {Station} from '../models/station.interface'
 import {SelectionService} from '../services/selection/selection.service'
+import {ToolService} from "../services/tool/tool.service";
 
 @Component({
   selector: 'app-map',
@@ -8,6 +9,8 @@ import {SelectionService} from '../services/selection/selection.service'
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
+
+  selectedTool: string
 
   stations: Station[] = [
     {
@@ -20,13 +23,33 @@ export class MapComponent implements OnInit {
     }
   ]
 
-  constructor(private selection: SelectionService) { }
+  constructor(private selection: SelectionService, private tool: ToolService) {
+    tool.selectedTool$.subscribe(t => this.selectedTool = t)
+  }
 
   ngOnInit() {
   }
 
-  onClick() {
-    this.selection.clear()
+  onClick(event: MouseEvent) {
+    switch (this.selectedTool) {
+      default:
+        this.selection.clear()
+        break
+
+      case 'station_create':
+        this.stations.push({
+          position: {
+            x: event.offsetX,
+            y: event.offsetY
+          },
+          label: {
+            title: `Station ${this.stations.length + 1}`,
+            position: { x: 0, y: 0},
+            icons: []
+          }
+        })
+        break
+    }
   }
 
 }

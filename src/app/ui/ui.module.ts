@@ -6,13 +6,14 @@ import { ToolBarComponent } from './tool-bar/tool-bar.component'
 import { IconComponent } from './icon/icon.component'
 import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.component'
 import { ButtonDirective } from './button/button.directive'
-import { DropdownComponent } from './dropdown/dropdown.component'
 import {MouseMotionCapturerComponent} from './mouse-motion-capturer/mouse-motion-capturer.component'
+import {MapServicesModule} from "../map/services/map-services.module";
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
+    MapServicesModule
   ],
   declarations: [
     MenuBarComponent,
@@ -20,7 +21,6 @@ import {MouseMotionCapturerComponent} from './mouse-motion-capturer/mouse-motion
     IconComponent,
     VerticalToolbarComponent,
     ButtonDirective,
-    DropdownComponent,
     MouseMotionCapturerComponent
   ],
   exports: [
@@ -29,7 +29,6 @@ import {MouseMotionCapturerComponent} from './mouse-motion-capturer/mouse-motion
     IconComponent,
     VerticalToolbarComponent,
     ButtonDirective,
-    DropdownComponent,
     MouseMotionCapturerComponent
   ],
   providers: [
