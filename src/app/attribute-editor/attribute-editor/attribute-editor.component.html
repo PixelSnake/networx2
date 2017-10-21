@@ -1,0 +1,7 @@
+<div class="container flex flex-row" *ngIf="selected.length">
+  <div class="resizeHandle flex"></div>
+
+  <div class="content flex flex-column">
+    <app-station-editor *ngIf="selectedStations.length" [stations]="selectedStations"></app-station-editor>
+  </div>
+</div>
