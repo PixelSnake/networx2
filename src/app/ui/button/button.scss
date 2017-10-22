@@ -1,24 +1,17 @@
-@import '~@angular/material/theming';
-@mixin button-theme($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-
-  [appButton] {
-    background: none;
-    padding: 4px 8px;
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.1);
-    }
-  }
-}
-
+@import "../../../style/animations";
 @import "../../../style/theme";
-@include button-theme($app-theme)
 
 [appButton] {
   border: none;
   cursor: pointer;
   outline: none;
   transition: background $animation-length ease;
+
+  color: $c-black;
+  background: $c-white-20;
+  padding: 4px 8px;
+
+  &:hover {
+    background: $c-white-40;
+  }
 }

@@ -1,0 +1,63 @@
+@import "../../../style/theme";
+
+:host {
+  margin-right: 2px;
+}
+
+.tab {
+  position: relative;
+  padding: 8px;
+
+  min-width: 128px;
+  max-width: 256px;
+
+  color: $c-black;
+  background: $c-white-10;
+
+  &:hover {
+    background: $c-white-20;
+  }
+
+  &.active {
+    background: $c-white-20;
+  }
+
+  &.changed {
+    padding-left: 32px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: $c-primary;
+
+      left: 14px;
+      top: 14px;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+    }
+  }
+}
+
+.title {
+  margin-right: 16px;
+}
+
+.closeButton {
+  position: relative;
+  color: $c-black;
+
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+
+  app-icon {
+    position: absolute;
+    top: -2px;
+  }
+
+  &:hover {
+    background: $c-primary;
+  }
+}

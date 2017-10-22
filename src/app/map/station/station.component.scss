@@ -1,15 +1,4 @@
-@import '~@angular/material/theming';
-@mixin station-theme($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-
-  .dot.selected {
-    box-shadow: 0 0 0 4px mat-color($primary);
-  }
-}
-
 @import "../../../style/theme";
-@include station-theme($app-theme)
 
 .container {
   position: absolute;
@@ -26,7 +15,7 @@
 
   border-radius: 100%;
   border: 2px solid black;
-  background: #fff;
+  background: white;
 
   transition:
     width 0.2s,
@@ -39,10 +28,17 @@
     width: 20px;
     height: 20px;
   }
+
+  &.selected {
+    box-shadow: 0 0 0 4px $c-primary;
+  }
 }
 
 .label {
   position: absolute;
-  left: 0px;
-  top: 0px;
+
+  left: 0;
+  top: 0;
+
+  color: $c-black;
 }
