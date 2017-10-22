@@ -1,8 +1,4 @@
 <div class="flex flex-row container">
-  <app-menu-bar-tab [title]="'unnamed'" [active]="true">
-
-  </app-menu-bar-tab>
-  <app-menu-bar-tab [title]="'unnamed'" [active]="false" [changed]="true">
-
+  <app-menu-bar-tab *ngFor="let file of files" [title]="file.filename || 'unnamed'" [active]="true" [changed]="file.changed">
   </app-menu-bar-tab>
 </div>
