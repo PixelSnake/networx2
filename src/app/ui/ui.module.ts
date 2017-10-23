@@ -8,12 +8,15 @@ import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.co
 import { ButtonDirective } from './button/button.directive'
 import {MouseMotionCapturerComponent} from './mouse-motion-capturer/mouse-motion-capturer.component'
 import {MapServicesModule} from "../map/services/map-services.module";
+import { MenuBarTabComponent } from './menu-bar-tab/menu-bar-tab.component';
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
-    MapServicesModule
+    MapServicesModule,
+    SharedModule
   ],
   declarations: [
     MenuBarComponent,
@@ -21,7 +24,8 @@ import {MapServicesModule} from "../map/services/map-services.module";
     IconComponent,
     VerticalToolbarComponent,
     ButtonDirective,
-    MouseMotionCapturerComponent
+    MouseMotionCapturerComponent,
+    MenuBarTabComponent
   ],
   exports: [
     MenuBarComponent,

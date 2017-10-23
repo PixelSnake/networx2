@@ -1,16 +1,4 @@
-@import '~@angular/material/theming';
-@mixin station-theme($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-
-  .container.selected {
-    background: transparentize(mat-color($primary), 0.9);
-    border-color: mat-color($primary);
-  }
-}
-
-@import "../../../style/theme";
-@include station-theme($app-theme)
+@import "../../../style/light.theme";
 
 .container {
   position: absolute;
@@ -18,4 +6,9 @@
 
   border: 2px solid transparent;
   white-space: nowrap;
+
+  &.selected {
+    background: transparentize($c-primary, 0.9);
+    border-color: $c-primary;
+  }
 }

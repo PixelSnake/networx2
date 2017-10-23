@@ -1,4 +1,7 @@
-app-icon {
-  margin-left: 0;
-  margin-right: 8px;
+@import "../../../style/theme";
+
+.container {
+  width: 100%;
+
+  background: $c-white;
 }
