@@ -3,6 +3,7 @@
      [style.top]="label.position.y + 'px'"
      [class.selected]="selected">
   <app-mouse-motion-capturer
+    *ngIf="selected"
     (mouseMoved)="mouseMoved($event)">
   </app-mouse-motion-capturer>
 

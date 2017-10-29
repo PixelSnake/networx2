@@ -1,5 +1,5 @@
 <app-station
-  *ngFor="let station of stations"
+  *ngFor="let station of (stations | async)"
   [station]="station">
 
 </app-station>

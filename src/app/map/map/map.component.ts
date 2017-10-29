@@ -1,33 +1,32 @@
-import {Component, HostListener, OnInit} from '@angular/core'
+import {Component, HostListener, OnDestroy, OnInit} from '@angular/core'
 import {Station} from '../models/station.interface'
 import {SelectionService} from '../services/selection/selection.service'
 import {ToolService} from "../services/tool/tool.service";
+import {StationService} from "../services/station/station.service";
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements OnInit, OnDestroy {
 
   selectedTool: string
+  stations: Observable<Station[]>
 
-  stations: Station[] = [
-    {
-      position: { x: 100, y: 100 },
-      label: {
-        title: 'Station 1',
-        position: { x: 0, y: 0 },
-        icons: []
-      }
-    }
-  ]
-
-  constructor(private selection: SelectionService, private tool: ToolService) {
+  constructor(private selection: SelectionService,
+              private tool: ToolService,
+              private stationService: StationService) {
     tool.selectedTool$.subscribe(t => this.selectedTool = t)
+    this.stations = this.stationService.stations$
   }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy() {
+    this.tool.selectedTool$.unsubscribe()
   }
 
   onClick(event: MouseEvent) {
@@ -37,13 +36,13 @@ export class MapComponent implements OnInit {
         break
 
       case 'station_create':
-        this.stations.push({
+        this.stationService.addStation({
           position: {
             x: event.offsetX,
             y: event.offsetY
           },
           label: {
-            title: `Station ${this.stations.length + 1}`,
+            title: `Station ${this.stationService.stationCount + 1}`,
             position: { x: 0, y: 0},
             icons: []
           }
