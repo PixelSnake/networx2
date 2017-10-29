@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core'
 import {Selectable} from '../../models/selectable.interface'
+import {ToolService} from "../tool/tool.service";
 
 @Injectable()
 export class SelectionService {
 
+  private tool: string
+
   private selectables: Selectable[] = []
   private selected: Selectable[] = []
 
-  constructor() { }
+  constructor(private toolService: ToolService) {
+    toolService.selectedTool$.subscribe(t => this.tool = t)
+  }
 
   registerSelectable(s: Selectable) {
     this.selectables.push(s)
@@ -19,8 +24,10 @@ export class SelectionService {
   }
 
   setSelected(s: Selectable) {
-    s.onSelected()
-    this.selected.push(s)
+    if (!this.tool || this.tool === 'select') {
+      s.onSelected()
+      this.selected.push(s)
+    }
   }
 
 }
