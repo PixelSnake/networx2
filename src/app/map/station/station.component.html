@@ -2,7 +2,7 @@
      [style.left]="station.position.x + 'px'"
      [style.top]="station.position.y + 'px'">
   <div class="dot"
-       [class.selected]="selected">
+       [class.selected]="station.selected">
     <app-mouse-motion-capturer
       (mouseMoved)="mouseMoved($event)"
       (mouseDown)="mouseDown()"></app-mouse-motion-capturer>

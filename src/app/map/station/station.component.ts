@@ -15,8 +15,6 @@ import {ConnectionService} from "../services/connection/connection.service";
 export class StationComponent implements OnInit, Selectable {
 
   tool: string
-  selected: boolean
-
   @ViewChild('label')
   label: StationLabelComponent
 
@@ -51,12 +49,12 @@ export class StationComponent implements OnInit, Selectable {
   }
 
   onSelected(): void {
-    this.selected = true
+    this.station.selected = true
     this.label.onSelected()
   }
 
   onDeselected(): void {
-    this.selected = false
+    this.station.selected = false
     this.label.onDeselected()
   }
 

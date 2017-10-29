@@ -29,6 +29,7 @@ export class ConnectionService {
   private connectTopTwo() {
     const a = this.stationStack.pop()
     const b = this.stationStack.pop()
+    this.stationStack.push(a)
 
     this.addConnection({
       start: a,
@@ -50,6 +51,10 @@ export class ConnectionService {
     const i = ids.indexOf(c.id)
     this.connections.splice(i, 1)
     this.connections$.next(this.connections)
+  }
+
+  clearStack() {
+    this.stationStack = []
   }
 
 }

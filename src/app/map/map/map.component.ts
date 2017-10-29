@@ -4,6 +4,7 @@ import {SelectionService} from '../services/selection/selection.service'
 import {ToolService} from "../services/tool/tool.service";
 import {StationService} from "../services/station/station.service";
 import {Observable} from "rxjs/Observable";
+import {ConnectionService} from "../services/connection/connection.service";
 
 @Component({
   selector: 'app-map',
@@ -17,7 +18,8 @@ export class MapComponent implements OnInit, OnDestroy {
 
   constructor(private selection: SelectionService,
               private tool: ToolService,
-              private stationService: StationService) {
+              private stationService: StationService,
+              private connectionService: ConnectionService) {
     tool.selectedTool$.subscribe(t => this.selectedTool = t)
     this.stations = this.stationService.stations$
   }
@@ -33,6 +35,7 @@ export class MapComponent implements OnInit, OnDestroy {
     switch (this.selectedTool) {
       default:
         this.selection.clear()
+        this.connectionService.clearStack()
         break
 
       case 'station_create':
